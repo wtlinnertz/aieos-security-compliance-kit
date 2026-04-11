@@ -1,6 +1,6 @@
 # How to Use This Kit with AI
 
-This guide explains how to set up AI sessions for each artifact in the Security & Compliance Kit workflow. Follow the session setup instructions precisely — incorrect session setup is the most common cause of poor artifact quality.
+This guide explains how to set up AI sessions for each artifact in the Security & Compliance Kit workflow. Follow the session setup instructions precisely. Incorrect session setup is the most common cause of poor artifact quality.
 
 ---
 
@@ -8,19 +8,18 @@ This guide explains how to set up AI sessions for each artifact in the Security 
 
 **One artifact per session.** Do not generate multiple artifacts in the same session.
 
-**Separate generation and validation.** Always validate in a new session. Never ask the AI that generated an artifact to validate it — this produces self-validation bias.
+**Separate generation and validation.** Always validate in a new session. Never ask the AI that generated an artifact to validate it. This produces self-validation bias.
 
 **Include full frozen documents.** Do not summarize upstream artifacts. Provide the complete document.
 
----
 
-## TM — Generation Session
+## TM. Generation Session
 
 **Session setup:**
 ```
 Documents to provide:
-1. Frozen SAD (System Architecture Document — full document)
-2. ACF section 3 (security guardrails — if available)
+1. Frozen SAD (System Architecture Document. Full document)
+2. ACF section 3 (security guardrails. If available)
 3. docs/specs/tm-spec.md
 4. docs/artifacts/tm-template.md
 5. docs/principles/security-principles.md
@@ -30,7 +29,7 @@ Prompt:
 Follow the prompt in docs/prompts/tm-prompt.md.
 Use the template exactly. Satisfy all hard gates in the spec.
 Assess every component and integration point from the SAD.
-Do not invent threats not supported by the architecture — mark
+Do not invent threats not supported by the architecture. Mark
 any assumptions with [ASSUMPTION: reason]. Output pure Markdown."
 ```
 
@@ -53,14 +52,13 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/tm-validator.md."
 ```
 
----
 
-## SAR — Generation Session
+## SAR. Generation Session
 
 **Session setup:**
 ```
 Documents to provide:
-1. Frozen TM (Threat Model — full document)
+1. Frozen TM (Threat Model. Full document)
 2. ACF section 3 (security guardrails)
 3. Implementation evidence (code review findings, test results, configuration)
 4. docs/specs/sar-spec.md
@@ -73,7 +71,7 @@ Follow the prompt in docs/prompts/sar-prompt.md.
 Use the template exactly. Satisfy all hard gates in the spec.
 Verify each TM mitigation against implementation evidence.
 Verify each ACF section 3 guardrail with concrete evidence.
-Do not assert security without evidence — mark gaps with
+Do not assert security without evidence. Mark gaps with
 [MISSING: evidence needed]. Output pure Markdown."
 ```
 
@@ -96,16 +94,15 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/sar-validator.md."
 ```
 
----
 
-## CER — Generation Session
+## CER. Generation Session
 
 **Session setup:**
 ```
 Documents to provide:
 1. Regulatory requirements document (specific mandate with clause references)
 2. Implementation evidence (code, configuration, process documentation, audit logs)
-3. Existing frozen SCK artifacts (TM, SAR, DAR — if available)
+3. Existing frozen SCK artifacts (TM, SAR, DAR. If available)
 4. docs/specs/cer-spec.md
 5. docs/artifacts/cer-template.md
 6. docs/principles/compliance-principles.md
@@ -115,7 +112,7 @@ Prompt:
 Follow the prompt in docs/prompts/cer-prompt.md.
 Use the template exactly. Satisfy all hard gates in the spec.
 Map every identified regulatory requirement to concrete evidence.
-Do not assert compliance without evidence — mark gaps with
+Do not assert compliance without evidence. Mark gaps with
 remediation plans. Output pure Markdown."
 ```
 
@@ -138,9 +135,8 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/cer-validator.md."
 ```
 
----
 
-## DAR — Generation Session
+## DAR. Generation Session
 
 **Session setup:**
 ```
@@ -182,7 +178,6 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/dar-validator.md."
 ```
 
----
 
 ## Troubleshooting
 
@@ -193,7 +188,7 @@ Check that the generation session included all required inputs. Missing inputs a
 Provide more context about the system's deployment environment, user base, and data sensitivity in the SAD or principles file. Generic threat actors like "hacker" without capability levels fail the threat_actor_identification gate.
 
 **Mitigation verification is incomplete**
-The SAR requires concrete evidence for each mitigation — not assertions that it was done. Provide code review findings, test results, or configuration evidence to the generation session.
+The SAR requires concrete evidence for each mitigation. Not assertions that it was done. provide code review findings, test results, or configuration evidence to the generation session.
 
 **Compliance evidence is flagged as assertions rather than evidence**
 The CER requires retrievable, timestamped evidence. Statements like "we encrypt data" are assertions. Evidence is: "AES-256 encryption configured in config/encryption.yml, verified by integration test test_data_encryption_at_rest, last run 2026-03-01."

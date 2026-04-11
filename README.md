@@ -2,22 +2,18 @@
 
 **Layer 10 of the AIEOS system — Security & Compliance (Cross-Cutting)**
 
-This kit governs how security threats are identified, security implementations are verified, compliance evidence is collected, and dependency risks are assessed. It is a cross-cutting kit that operates across multiple layers of the AIEOS system rather than sitting in a single sequential position in the pipeline.
+This kit governs how security threats are identified, security implementations are verified, compliance evidence is collected, and dependency risks are assessed. It's a cross-cutting kit that operates across multiple layers of the AIEOS system rather than sitting in a single sequential position in the pipeline.
 
----
+## What this kit does
 
-## What This Kit Does
-
-Security and compliance concerns arise at multiple points in the delivery lifecycle — not just before release. This kit provides structured governance for four distinct security and compliance activities:
+Security and compliance concerns arise at multiple points in the delivery lifecycle, not just before release. This kit provides structured governance for four distinct security and compliance activities:
 
 - **Threat modeling** — What can go wrong? Who would attack this system? What are the attack surfaces? (triggered after system architecture is defined)
 - **Security assessment** — Is the implementation actually secure? Have guardrails been followed? (triggered after code is complete)
 - **Compliance evidence** — Can we prove we meet regulatory requirements? Is the evidence auditable? (triggered by compliance mandate, any time)
 - **Dependency auditing** — Are our dependencies safe? Are licenses compatible? Is supply chain risk managed? (triggered before release)
 
----
-
-## Artifact Types
+## Artifact types
 
 This kit produces four governed artifact types:
 
@@ -30,9 +26,7 @@ This kit produces four governed artifact types:
 
 Each governed artifact type has exactly four governing files: spec, template, prompt, validator.
 
----
-
-## Cross-Cutting Nature
+## Cross-cutting nature
 
 Unlike most AIEOS kits, this kit does not have a single upstream/downstream position. Artifacts are triggered at different points:
 
@@ -45,17 +39,13 @@ Unlike most AIEOS kits, this kit does not have a single upstream/downstream posi
 
 The kit can be adopted independently without requiring other AIEOS kits.
 
----
-
-## Quick Start
+## Quick start
 
 1. Read `docs/playbook.md` — the complete process definition with trigger points
 2. Read `docs/how-to-use-with-ai.md` — session setup and AI tool guidance
 3. See `docs/entry-from-eek.md` — boundary briefing for the primary entry point
 
----
-
-## Repository Structure
+## Repository structure
 
 ```
 docs/
@@ -76,9 +66,7 @@ tests/
 CLAUDE.md              # AI operating instructions
 ```
 
----
-
-## AIEOS Layer
+## AIEOS layer
 
 | Layer | Kit | Status |
 |-------|-----|--------|

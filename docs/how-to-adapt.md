@@ -1,6 +1,6 @@
 # How to Adapt This Kit
 
-This kit provides the structure, rules, and prompts for security and compliance governance. Adapting it to your organization means filling in the content that is specific to your context — without modifying the governance structure.
+This kit provides the structure, rules, and prompts for security and compliance governance. Adapting it to your organization means filling in the content that is specific to your context without modifying the governance structure.
 
 ---
 
@@ -25,40 +25,37 @@ The playbook defines four trigger points. If your organization has different act
 
 ### Severity Thresholds
 
-The TM and SAR specs reference severity levels for threats and vulnerabilities. If your organization uses a different severity taxonomy, adapt the specs accordingly. Do not remove severity classification — adapt the levels.
+The TM and SAR specs reference severity levels for threats and vulnerabilities. If your organization uses a different severity taxonomy, adapt the specs accordingly. Do not remove severity classification. Adapt the levels.
 
----
 
 ## What Not to Adapt
 
 ### Specs
 
-The specs define what makes an artifact valid. Do not soften hard gates to make artifacts easier to produce. If a hard gate is failing consistently, that usually means the artifact is incomplete — not that the gate is wrong.
+The specs define what makes an artifact valid. Do not soften hard gates to make artifacts easier to produce. If a hard gate is failing consistently, that usually means the artifact is incomplete, not that the gate is wrong.
 
 If you genuinely need to add a hard gate (your organization requires something the spec does not check), add it. Do not remove existing hard gates.
 
 ### Validator Logic
 
-Validators evaluate against specs. If a validator is producing unexpected results, check whether the spec accurately captures your requirements — and adjust the spec if needed, not the validator.
+Validators evaluate against specs. If a validator is producing unexpected results, check whether the spec accurately captures your requirements and adjust the spec if needed, not the validator.
 
 ### Governance Model
 
 `docs/governance-model.md` is a synchronized copy of the canonical governance model. Do not edit it. If you believe the governance model should change, update `aieos-governance-foundation/governance-model.md` and sync all kit copies.
 
----
 
 ## Adding Artifact Types
 
 If your organization needs additional governed artifacts (e.g., a penetration test record, a privacy impact assessment), follow the four-file system:
 
-1. Write the spec first — define the hard gates before writing anything else
-2. Write the validator — this forces you to verify the spec is evaluable
-3. Write the template — structure only, no content rules
-4. Write the prompt — generation behavior, references spec and template
+1. Write the spec first. Define the hard gates before writing anything else
+2. Write the validator. This forces you to verify the spec is evaluable
+3. Write the template. Structure only, no content rules
+4. Write the prompt. Generation behavior, references spec and template
 
 Register the new artifact type in the playbook, index, and CLAUDE.md.
 
----
 
 ## Tool Bindings
 
@@ -73,9 +70,8 @@ docs/bindings/
   compliance-platform-mapping.md     # Maps compliance platform evidence to CER format
 ```
 
-Bindings are not governed artifacts — they have no spec, validator, or prompt. Update them when your tooling changes without touching the governed files.
+Bindings are not governed artifacts. They have no spec, validator, or prompt. update them when your tooling changes without touching the governed files.
 
----
 
 ## Independent Adoption
 
@@ -86,7 +82,6 @@ This kit is designed to be adoptable independently. You do not need other AIEOS 
 - For CER: regulatory requirements and implementation evidence
 - For DAR: dependency manifest and vulnerability scan results
 
----
 
 ## First-Time Setup Checklist
 
