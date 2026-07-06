@@ -27,7 +27,6 @@ The playbook defines four trigger points. If your organization has different act
 
 The TM and SAR specs reference severity levels for threats and vulnerabilities. If your organization uses a different severity taxonomy, adapt the specs accordingly. Do not remove severity classification. Adapt the levels.
 
-
 ## What Not to Adapt
 
 ### Specs
@@ -44,7 +43,6 @@ Validators evaluate against specs. If a validator is producing unexpected result
 
 `docs/governance-model.md` is a synchronized copy of the canonical governance model. Do not edit it. If you believe the governance model should change, update `aieos-governance-foundation/governance-model.md` and sync all kit copies.
 
-
 ## Adding Artifact Types
 
 If your organization needs additional governed artifacts (e.g., a penetration test record, a privacy impact assessment), follow the four-file system:
@@ -55,7 +53,6 @@ If your organization needs additional governed artifacts (e.g., a penetration te
 4. Write the prompt. Generation behavior, references spec and template
 
 Register the new artifact type in the playbook, index, and CLAUDE.md.
-
 
 ## Tool Bindings
 
@@ -72,7 +69,6 @@ docs/bindings/
 
 Bindings are not governed artifacts. They have no spec, validator, or prompt. update them when your tooling changes without touching the governed files.
 
-
 ## Independent Adoption
 
 This kit is designed to be adoptable independently. You do not need other AIEOS kits to use it. If you are not using the Engineering Execution Kit, provide equivalent inputs:
@@ -81,7 +77,6 @@ This kit is designed to be adoptable independently. You do not need other AIEOS 
 - For SAR: any security guardrail document and implementation evidence
 - For CER: regulatory requirements and implementation evidence
 - For DAR: dependency manifest and vulnerability scan results
-
 
 ## First-Time Setup Checklist
 
