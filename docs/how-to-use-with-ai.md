@@ -12,7 +12,6 @@ This guide explains how to set up AI sessions for each artifact in the Security 
 
 **Include full frozen documents.** Do not summarize upstream artifacts. Provide the complete document.
 
-
 ## TM. Generation Session
 
 **Session setup:**
@@ -51,7 +50,6 @@ Use only the spec as the source of truth for pass/fail criteria.
 Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/tm-validator.md."
 ```
-
 
 ## SAR. Generation Session
 
@@ -94,7 +92,6 @@ Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/sar-validator.md."
 ```
 
-
 ## CER. Generation Session
 
 **Session setup:**
@@ -134,7 +131,6 @@ Use only the spec as the source of truth for pass/fail criteria.
 Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/cer-validator.md."
 ```
-
 
 ## DAR. Generation Session
 
@@ -177,7 +173,6 @@ Use only the spec as the source of truth for pass/fail criteria.
 Do not suggest improvements. Judge only what is explicitly present.
 Output JSON using the format defined in docs/validators/dar-validator.md."
 ```
-
 
 ## Troubleshooting
 
