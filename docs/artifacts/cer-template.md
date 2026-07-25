@@ -6,11 +6,11 @@
 
 | Field | Value |
 |-------|-------|
-| CER ID | CER-{PROJECT}-{NNN} |
-| System/Initiative Name | {system or initiative name} |
+| Artifact ID | CER-{PROJECT}-{NNN} |
 | Owner | {team or role — not an individual person} |
+| Status | DRAFT |
+| System/Initiative Name | {system or initiative name} |
 | Version | v{N} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
 | Regulatory Mandate | {specific regulation, standard, or framework} |
 | Governance Model Version | 1.0 |
 | Prompt Version | {prompt version} |

@@ -6,11 +6,11 @@
 
 | Field | Value |
 |-------|-------|
-| SAR ID | SAR-{PROJECT}-{NNN} |
-| System Name | {system name} |
+| Artifact ID | SAR-{PROJECT}-{NNN} |
 | Owner | {team or role — not an individual person} |
+| Status | DRAFT |
+| System Name | {system name} |
 | Version | v{N} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
 | TM Reference | {TM-{PROJECT}-{NNN}} |
 | ACF Reference | {ACF version providing section 3 guardrails} |
 | Governance Model Version | 1.0 |
