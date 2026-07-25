@@ -6,11 +6,11 @@
 
 | Field | Value |
 |-------|-------|
-| DAR ID | DAR-{PROJECT}-{NNN} |
-| Project Name | {project name} |
+| Artifact ID | DAR-{PROJECT}-{NNN} |
 | Owner | {team or role — not an individual person} |
+| Status | DRAFT |
+| Project Name | {project name} |
 | Version | v{N} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
 | Audit Date | {YYYY-MM-DD} |
 | Manifest Source | {e.g., package.json, requirements.txt, go.mod} |
 | Governance Model Version | 1.0 |

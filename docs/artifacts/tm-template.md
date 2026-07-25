@@ -6,11 +6,11 @@
 
 | Field | Value |
 |-------|-------|
-| TM ID | TM-{PROJECT}-{NNN} |
-| System Name | {system name — must match SAD} |
+| Artifact ID | TM-{PROJECT}-{NNN} |
 | Owner | {team or role — not an individual person} |
+| Status | DRAFT |
+| System Name | {system name — must match SAD} |
 | Version | v{N} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
 | SAD Reference | {SAD-{PROJECT}-{NNN}} |
 | Governance Model Version | 1.0 |
 | Prompt Version | {prompt version} |
